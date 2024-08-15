@@ -72,6 +72,9 @@ plt.title("Percision-Recall Curve")
 plt.legend()
 plt.grid(True, lw=0.5, linestyle="--")
 plt.tight_layout()
+plt.savefig(
+    r"D:\ramy\Omnetrex\Heartbeat anomaly detection on time series\images\evaluation\DenseAutoencoder.png"
+)
 plt.show()
 
 # GET ANOMALIES BASED ON BEST THRESHOLD ON RECALL-PERSISION
@@ -91,9 +94,19 @@ display = ConfusionMatrixDisplay(
 )
 display.plot()
 plt.title("Confusion Matrix")
+plt.savefig(
+    r"D:\ramy\Omnetrex\Heartbeat anomaly detection on time series\images\evaluation\DenseAutoencodercm.png"
+)
 plt.show()
 
 # SAVE NET
 autoencoder.save(
     r"D:\ramy\Omnetrex\Heartbeat anomaly detection on time series\Models\DenseAutoencoder.keras"
+)
+
+utils.plot_model(
+    autoencoder,
+    to_file=r"D:\ramy\Omnetrex\Heartbeat anomaly detection on time series\images\architecture\dense_autoencoder.png",
+    show_shapes=True,
+    show_layer_names=True,
 )

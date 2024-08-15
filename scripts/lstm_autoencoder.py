@@ -92,6 +92,9 @@ plt.xlabel("Recall")
 plt.ylabel("Precision")
 plt.title("Precision-Recall Curve")
 plt.legend()
+plt.savefig(
+    r"D:\ramy\Omnetrex\Heartbeat anomaly detection on time series\images\evaluation\LSTMAutoencoder.png"
+)
 plt.show()
 
 # GET ANOMALIES BASED ON BEST THRESHOLD ON RECALL-PERSISION
@@ -107,9 +110,19 @@ display = ConfusionMatrixDisplay(
 )
 display.plot()
 plt.title("Confusion Matrix")
+plt.savefig(
+    r"D:\ramy\Omnetrex\Heartbeat anomaly detection on time series\images\evaluation\LSTMAutoencodercm.png"
+)
 plt.show()
 
 # SAVE NET
 lstm_autoencoder.save(
     r"D:\ramy\Omnetrex\Heartbeat anomaly detection on time series\Models\LSTMAutoencoder.keras"
+)
+
+utils.plot_model(
+    lstm_autoencoder,
+    to_file=r"D:\ramy\Omnetrex\Heartbeat anomaly detection on time series\images\architecture\lstm_autoencoder.png",
+    show_shapes=True,
+    show_layer_names=True,
 )
