@@ -14,8 +14,7 @@
 4. [Evaluation](#evaluation)
     - [Confusion Matrix](#confusion-matrix)
     - [Precision-Recall Plot](#precision-recall-plot)
-5. [Results](#results)
-6. [Conclusion](#conclusion)
+5. [Conclusion](#conclusion)
 
 ## Introduction
 
@@ -43,11 +42,29 @@ Isolation Forest is an unsupervised learning algorithm for anomaly detection. In
 - **Parameters**:
   - Contamination: 0.5
 
+#### Model Plot
+![Isolation Forest Model Plot](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/tree/isolation_forest_tree.png)
+
+#### Confusion Matrix
+![Isolation Forest Confusion Matrix](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/evaluation/IsolationForestcm.png)
+
+#### Precision-Recall Plot
+![Isolation Forest Precision-Recall Plot](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/evaluation/IsolationForest.png)
+
 ### Autoencoder (Dense Layers)
 
 An autoencoder with dense layers was used for anomaly detection. The model learns to compress and then reconstruct the data, and anomalies are detected based on the reconstruction error.
 
 - **Threshold**: 40 (based on reconstruction error)
+
+#### Model Plot
+![Autoencoder Model Plot](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/architecture/dense_autoencoder.png)
+
+#### Confusion Matrix
+![Autoencoder Confusion Matrix](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/evaluation/DenseAutoencodercm.png)
+
+#### Precision-Recall Plot
+![Autoencoder Precision-Recall Plot](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/evaluation/DenseAutoencoder.png)
 
 ### LSTM Autoencoder
 
@@ -55,17 +72,48 @@ A Long Short-Term Memory (LSTM) autoencoder was implemented to capture temporal 
 
 - **Threshold**: 40 (based on reconstruction error)
 
+#### Model Plot
+![LSTM Autoencoder Model Plot](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/architecture/lstm_autoencoder.png)
+
+#### Confusion Matrix
+![LSTM Autoencoder Confusion Matrix](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/evaluation/LSTMAutoencodercm.png)
+
+#### Precision-Recall Plot
+![LSTM Autoencoder Precision-Recall Plot](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/evaluation/LSTMAutoencoder.png)
+
 ### LSTM Autoencoder + CNN as Embedding Layer
 
 In this model, a Convolutional Neural Network (CNN) is used as an embedding layer before feeding the data into the LSTM autoencoder. This helps in extracting more meaningful features from the ECG signals.
 
 - **Threshold**: 40 (based on reconstruction error)
 
+#### Model Plot
+##### CNN Embedding
+![CNN Embedding Model Plot](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/architecture/cnn_embed.png)
+
+##### LSTM Autoencoder
+![LSTM Autoencoder](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/architecture/cnn_embed_lstm_autoencoder.png)
+
+#### Confusion Matrix
+![LSTM Autoencoder + CNN Embedding Confusion Matrix](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/evaluation/CNNEmbedINGLSTMAutoencodercm.png)
+
+#### Precision-Recall Plot
+![LSTM Autoencoder + CNN Embedding Precision-Recall Plot](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/evaluation/CNNEmbedINGLSTMAutoencoder.png)
+
 ### LSTM Autoencoder + CNN Trainable as Feature Extractor
 
 This model uses a CNN as a trainable feature extractor combined with an LSTM autoencoder. The CNN layers are trained along with the LSTM autoencoder to enhance the feature extraction process.
 
 - **Threshold**: 40 (based on reconstruction error)
+
+#### Model Plot
+![LSTM Autoencoder + CNN Trainable Model Plot](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/architecture/cnn_lstm_autoencoder.png)
+
+#### Confusion Matrix
+![LSTM Autoencoder + CNN Trainable Confusion Matrix](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/evaluation/CNNLSTMAutoencodercm.png)
+
+#### Precision-Recall Plot
+![LSTM Autoencoder + CNN Trainable Precision-Recall Plot](https://github.com/ramy-ibrahim-ahmed/ECG-Anomaly-detection/blob/main/images/evaluation/CNNLSTMAutoencoder.png)
 
 ## Evaluation
 
@@ -76,30 +124,6 @@ The confusion matrix was used to evaluate the performance of each model. It prov
 ### Precision-Recall Plot
 
 The precision-recall plot helps in understanding the trade-off between precision and recall for different threshold values. It is particularly useful for imbalanced datasets.
-
-## Results
-
-The performance of each model was evaluated based on the confusion matrix and precision-recall plots. Here are the key results for each model:
-
-- **Isolation Forest**:
-  - Confusion Matrix: [Include plot]
-  - Precision-Recall Plot: [Include plot]
-
-- **Autoencoder (Dense Layers)**:
-  - Confusion Matrix: [Include plot]
-  - Precision-Recall Plot: [Include plot]
-
-- **LSTM Autoencoder**:
-  - Confusion Matrix: [Include plot]
-  - Precision-Recall Plot: [Include plot]
-
-- **LSTM Autoencoder + CNN as Embedding Layer**:
-  - Confusion Matrix: [Include plot]
-  - Precision-Recall Plot: [Include plot]
-
-- **LSTM Autoencoder + CNN Trainable as Feature Extractor**:
-  - Confusion Matrix: [Include plot]
-  - Precision-Recall Plot: [Include plot]
 
 ## Conclusion
 
