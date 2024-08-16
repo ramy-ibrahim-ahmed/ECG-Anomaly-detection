@@ -123,4 +123,4 @@ This model uses a CNN as a trainable feature extractor combined with an LSTM aut
 
 ## Conclusion
 
-In this project, we explored various models for ECG anomaly detection. Each model was evaluated using confusion matrices and precision-recall plots. The results highlight the strengths and weaknesses of each approach, providing insights into which models perform best under different conditions. Further work can involve fine-tuning the models and exploring additional architectures to improve detection accuracy.
+In this project, we explored various models for ECG anomaly detection. Each model was evaluated using confusion matrices and precision-recall plots and AUPRC. The results highlight the strengths and weaknesses of each approach, providing insights into which models perform best under different conditions. Further work can involve fine-tuning the models and exploring additional architectures to improve detection accuracy.
